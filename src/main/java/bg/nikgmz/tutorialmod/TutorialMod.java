@@ -1,5 +1,6 @@
 package bg.nikgmz.tutorialmod;
 
+import bg.nikgmz.tutorialmod.item.ModItemGroups;
 import bg.nikgmz.tutorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -17,6 +18,7 @@ public class TutorialMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Hello Fabric world!");
+		ModItemGroups.registerItemGorups();
 		ModItems.registerModItems();
 	}
 }
