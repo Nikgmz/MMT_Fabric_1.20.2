@@ -1,6 +1,7 @@
 package bg.nikgmz.tutorialmod.item;
 
 import bg.nikgmz.tutorialmod.TutorialMod;
+import bg.nikgmz.tutorialmod.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -13,8 +14,12 @@ public class ModItemGroups {
     public static final ItemGroup MOD_GROUP = Registry.register(Registries.ITEM_GROUP, new Identifier(TutorialMod.MOD_ID, "uranium"),
             FabricItemGroup.builder().displayName(Text.translatable("Tutorial Mod"))
                     .icon(() -> new ItemStack(ModItems.ICON_GROUP_ITEM)).entries((displayContext, entries) -> {
+
+
                         entries.add(ModItems.URANIUM);
                         entries.add(ModItems.THORIUM);
+                        entries.add(ModBlocks.THORIUM_BLOCK);
+
                     }).build());
     public static void registerItemGorups() {
         TutorialMod.LOGGER.info("Registering Item Groups" + TutorialMod.MOD_ID);

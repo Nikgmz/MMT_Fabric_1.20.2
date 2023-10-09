@@ -2,5 +2,7 @@
   "item.tutorialmod.uranium":"Uranium",
   "item.tutorialmod.thorium":"Thorium",
 
+  "block.tutorialmod.thorium_block": "Thorium Block",
+
   "itemgroup.ruby": "Tutorial Mod"
 }
