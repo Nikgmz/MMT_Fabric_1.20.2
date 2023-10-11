@@ -19,6 +19,7 @@ public class ModItemGroups {
                         entries.add(ModItems.URANIUM);
                         entries.add(ModItems.THORIUM);
                         entries.add(ModBlocks.THORIUM_BLOCK);
+                        entries.add(ModBlocks.URANIUM_BLOCK);
 
                     }).build());
     public static void registerItemGorups() {

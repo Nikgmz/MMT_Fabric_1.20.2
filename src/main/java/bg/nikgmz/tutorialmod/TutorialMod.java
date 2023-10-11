@@ -1,10 +1,10 @@
 package bg.nikgmz.tutorialmod;
 
+import bg.nikgmz.tutorialmod.block.ModBlocks;
 import bg.nikgmz.tutorialmod.item.ModItemGroups;
 import bg.nikgmz.tutorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
-import net.minecraft.datafixer.fix.StriderGravityFix;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,5 +20,6 @@ public class TutorialMod implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 		ModItemGroups.registerItemGorups();
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
