@@ -17,6 +17,19 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.BONE)));
     public static final Block URANIUM_BLOCK = registerBlock("uranium_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+    public static final Block RAW_URANIUM_BLOCK = registerBlock("raw_uranium_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.RAW_IRON_BLOCK)));
+    public static final Block RAW_THORIUM_BLOCK = registerBlock("raw_thorium_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.RAW_IRON_BLOCK)));
+    public static final Block URANIUM_ORE = registerBlock("uranium_ore",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE).strength(2f)));
+    public static final Block DEEPSLATE_URANIUM_ORE = registerBlock("deepslate_uranium_ore",
+            new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE).strength(4f)));
+    public static final Block THORIUM_ORE = registerBlock("thorium_ore",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE).strength(2f)));
+    public static final Block DEEPSLATE_THORIUM_ORE = registerBlock("deepslate_thorium_ore",
+            new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE).strength(4f)));
+
 
     private static Block registerBlock(String name, Block block){
         registeringBlockItem(name, block);

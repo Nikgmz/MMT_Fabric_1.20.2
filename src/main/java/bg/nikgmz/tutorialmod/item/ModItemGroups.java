@@ -20,8 +20,16 @@ public class ModItemGroups {
                         entries.add(ModItems.THORIUM);
                         entries.add(ModItems.RAW_THORIUM);
                         entries.add(ModItems.RAW_URANIUM);
+
                         entries.add(ModBlocks.THORIUM_BLOCK);
+                        entries.add(ModBlocks.RAW_THORIUM_BLOCK);
                         entries.add(ModBlocks.URANIUM_BLOCK);
+                        entries.add(ModBlocks.RAW_URANIUM_BLOCK);
+
+                        entries.add(ModBlocks.URANIUM_ORE);
+                        entries.add(ModBlocks.DEEPSLATE_URANIUM_ORE);
+                        entries.add(ModBlocks.THORIUM_ORE);
+                        entries.add(ModBlocks.DEEPSLATE_THORIUM_ORE);
 
                     }).build());
     public static void registerItemGorups() {

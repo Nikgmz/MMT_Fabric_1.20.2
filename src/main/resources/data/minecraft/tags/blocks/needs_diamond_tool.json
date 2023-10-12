@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "tutorialmod:raw_uranium_block",
+    "tutorialmod:raw_thorium_block",
+    "tutorialmod:uranium_block",
+    "tutorialmod:thorium_block",
+    "tutorialmod:thorium_ore",
+    "tutorialmod:deepslate_thorium_ore",
+    "tutorialmod:uranium_ore",
+    "tutorialmod:deepslate_uranium_ore"
+    ]
+}

@@ -5,7 +5,14 @@
   "item.tutorialmod.raw_uranium":"Raw Uranium",
 
   "block.tutorialmod.thorium_block": "Thorium Block",
+  "block.tutorialmod.raw_thorium_block": "Raw Thorium Block",
   "block.tutorialmod.uranium_block": "Uranium Block",
+  "block.tutorialmod.raw_uranium_block": "Raw Uranium Block",
+
+  "block.tutorialmod.uranium_ore": "Uranium Ore",
+  "block.tutorialmod.deepslate_uranium_ore": "Deepslate Uranium Ore",
+  "block.tutorialmod.thorium_ore": "Thorium Ore",
+  "block.tutorialmod.deepslate_thorium_ore": "Deepslate Thorium Ore",
 
   "itemgroup.mod": "Tutorial Mod"
 }

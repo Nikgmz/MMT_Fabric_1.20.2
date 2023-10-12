@@ -8,10 +8,10 @@
   ],
   "key": {
     "#": {
-      "item": "tutorialmod:uranium"
+      "item": "tutorialmod:raw_uranium"
     }
   },
   "result": {
-    "item": "tutorialmod:uranium_block"
+    "item": "tutorialmod:raw_uranium_block"
   }
 }
