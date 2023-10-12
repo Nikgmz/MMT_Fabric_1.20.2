@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "thorium",
+  "ingredient": {
+    "item": "tutorialmod:raw_thorium"
+  },
+  "result": "tutorialmod:thorium"
+}

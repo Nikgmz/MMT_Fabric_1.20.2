@@ -1,9 +1,11 @@
 {
   "item.tutorialmod.uranium":"Uranium",
   "item.tutorialmod.thorium":"Thorium",
+  "item.tutorialmod.raw_thorium":"Raw Thorium",
+  "item.tutorialmod.raw_uranium":"Raw Uranium",
 
   "block.tutorialmod.thorium_block": "Thorium Block",
   "block.tutorialmod.uranium_block": "Uranium Block",
 
-  "itemgroup.ruby": "Tutorial Mod"
+  "itemgroup.mod": "Tutorial Mod"
 }

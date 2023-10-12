@@ -11,13 +11,15 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
-    public static final ItemGroup MOD_GROUP = Registry.register(Registries.ITEM_GROUP, new Identifier(TutorialMod.MOD_ID, "uranium"),
+    public static final ItemGroup MOD_GROUP = Registry.register(Registries.ITEM_GROUP, new Identifier(TutorialMod.MOD_ID, "mod"),
             FabricItemGroup.builder().displayName(Text.translatable("Tutorial Mod"))
                     .icon(() -> new ItemStack(ModItems.ICON_GROUP_ITEM)).entries((displayContext, entries) -> {
 
 
                         entries.add(ModItems.URANIUM);
                         entries.add(ModItems.THORIUM);
+                        entries.add(ModItems.RAW_THORIUM);
+                        entries.add(ModItems.RAW_URANIUM);
                         entries.add(ModBlocks.THORIUM_BLOCK);
                         entries.add(ModBlocks.URANIUM_BLOCK);
 
