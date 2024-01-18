@@ -20,6 +20,7 @@ public class ModItemGroups {
                         entries.add(ModItems.THORIUM);
                         entries.add(ModItems.RAW_THORIUM);
                         entries.add(ModItems.RAW_URANIUM);
+                        entries.add(ModItems.METAL_DETECTOR);
 
                         entries.add(ModBlocks.THORIUM_BLOCK);
                         entries.add(ModBlocks.RAW_THORIUM_BLOCK);
@@ -32,7 +33,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DEEPSLATE_THORIUM_ORE);
 
                     }).build());
-    public static void registerItemGorups() {
+    public static void registerItemGroups() {
         TutorialMod.LOGGER.info("Registering Item Groups" + TutorialMod.MOD_ID);
     }
 }
