@@ -37,7 +37,6 @@ public class MetalDetectorItem extends Item {
                         break;
                     }
                 }
-                player.sendMessage(Text.literal(mutable.getX() + " " + mutable.getZ()), false);
                 if (foundBlock) break;
             }
             if(!foundBlock){
