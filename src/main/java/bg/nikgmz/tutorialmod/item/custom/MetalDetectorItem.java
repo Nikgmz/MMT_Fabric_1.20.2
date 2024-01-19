@@ -37,6 +37,7 @@ public class MetalDetectorItem extends Item {
                         break;
                     }
                 }
+                if(foundBlock) break;
             }
             if(!foundBlock){
                 player.sendMessage(Text.literal("Nothing valuable here!"), false);
@@ -52,30 +53,37 @@ public class MetalDetectorItem extends Item {
     }
 
     private void fillList(ArrayList<BlockPos> tbt, BlockPos start){
-        tbt.add(start);
 
-        BlockPos.Mutable temp = (BlockPos.Mutable) start;// CHECK THIS LINE MAY NOT TRANSFORM CORRECTLY
+
+        BlockPos.Mutable temp = start.mutableCopy();
+        temp.setY(start.getY());
+        temp.setZ(start.getZ());
+        temp.setX(start.getX());
+        tbt.add(temp);
         //check setX and setZ functions may not work properly
-        temp.setX(start.getX()+1);
-        tbt.add(start);
-        temp.setZ(start.getZ()+1);
-        tbt.add(start);
-        temp.setZ(start.getZ()-2);
-        temp.setX(start.getX());
-        temp.setZ(start.getZ());
+        temp.setX(temp.getX()+1);
+        tbt.add(temp);
+        temp.setZ(temp.getZ()+1);
+        tbt.add(temp);
+        temp.setZ(temp.getZ()-2);
+        tbt.add(temp);
+        temp.setX(temp.getX());
+        temp.setZ(temp.getZ());
 
-        temp.setX(start.getX()-1);
-        tbt.add(start);
-        temp.setZ(start.getZ()+1);
-        tbt.add(start);
-        temp.setZ(start.getZ()-2);
-        temp.setX(start.getX());
-        temp.setZ(start.getZ());
+        temp.setX(temp.getX()-1);
+        tbt.add(temp);
+        temp.setZ(temp.getZ()+1);
+        tbt.add(temp);
+        temp.setZ(temp.getZ()-2);
+        tbt.add(temp);
+        temp.setX(temp.getX());
+        temp.setZ(temp.getZ());
 
-        temp.setZ(start.getZ()+1);
-        tbt.add(start);
-        temp.setZ(start.getZ()-2);
-        temp.setZ(start.getZ());
+        temp.setZ(temp.getZ()+1);
+        tbt.add(temp);
+        temp.setZ(temp.getZ()-2);
+        tbt.add(temp);
+        temp.setZ(temp.getZ());
 
     }
 }
