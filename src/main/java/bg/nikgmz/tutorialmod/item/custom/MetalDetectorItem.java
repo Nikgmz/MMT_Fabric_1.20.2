@@ -24,20 +24,21 @@ public class MetalDetectorItem extends Item {
             PlayerEntity player = context.getPlayer();
             boolean foundBlock = false;
 
-            ArrayList<BlockPos> threeByThree = new ArrayList<>(9);
-            for(int counter = 0; counter<9; ++counter){
-                posClicked = context.getBlockPos();
-                fillList(threeByThree, posClicked);
-                for(int i = -64; i<threeByThree.get(counter).getY(); ++i){
+            ArrayList<BlockPos.Mutable> threeByThree = new ArrayList<>();
+            posClicked = context.getBlockPos();
+            fillList(threeByThree, posClicked);
 
-                    BlockState state = context.getWorld().getBlockState(posClicked.down(i));
-                    if(isValuableBlock(state)){
+            for (BlockPos.Mutable mutable : threeByThree) {
+                for (int i = -64; i < mutable.getY(); ++i) {
+                    BlockState state = context.getWorld().getBlockState(mutable.down(i));
+                    if (isValuableBlock(state)) {
                         player.sendMessage(Text.literal("Valuable ore has been found nearby!"), false);
                         foundBlock = true;
                         break;
                     }
                 }
-                if(foundBlock) break;
+                player.sendMessage(Text.literal(mutable.getX() + " " + mutable.getZ()), false);
+                if (foundBlock) break;
             }
             if(!foundBlock){
                 player.sendMessage(Text.literal("Nothing valuable here!"), false);
@@ -52,38 +53,39 @@ public class MetalDetectorItem extends Item {
         return state.isOf(ModBlocks.THORIUM_ORE) || state.isOf(ModBlocks.URANIUM_ORE);
     }
 
-    private void fillList(ArrayList<BlockPos> tbt, BlockPos start){
-
+    private void fillList(ArrayList<BlockPos.Mutable> tbt, BlockPos start){
 
         BlockPos.Mutable temp = start.mutableCopy();
-        temp.setY(start.getY());
-        temp.setZ(start.getZ());
-        temp.setX(start.getX());
-        tbt.add(temp);
-        //check setX and setZ functions may not work properly
-        temp.setX(temp.getX()+1);
-        tbt.add(temp);
-        temp.setZ(temp.getZ()+1);
-        tbt.add(temp);
-        temp.setZ(temp.getZ()-2);
-        tbt.add(temp);
-        temp.setX(temp.getX());
-        temp.setZ(temp.getZ());
-
-        temp.setX(temp.getX()-1);
-        tbt.add(temp);
-        temp.setZ(temp.getZ()+1);
-        tbt.add(temp);
-        temp.setZ(temp.getZ()-2);
-        tbt.add(temp);
-        temp.setX(temp.getX());
-        temp.setZ(temp.getZ());
-
-        temp.setZ(temp.getZ()+1);
-        tbt.add(temp);
-        temp.setZ(temp.getZ()-2);
-        tbt.add(temp);
-        temp.setZ(temp.getZ());
+        temp.set(start.getX(), start.getY(), start.getZ());
+        tbt.add( temp);
+        BlockPos.Mutable temp1 = start.mutableCopy();
+        temp1.setX(start.getX()+1);
+        tbt.add(temp1);
+        BlockPos.Mutable temp2 = start.mutableCopy();
+        temp2.setX(start.getX()+1);
+        temp2.setZ(start.getZ()+1);
+        tbt.add(temp2);
+        BlockPos.Mutable temp3 = start.mutableCopy();
+        temp3.setX(start.getX()+1);
+        temp3.setZ(start.getZ()-1);
+        tbt.add(temp3);
+        BlockPos.Mutable temp4 = start.mutableCopy();
+        temp4.setX(start.getX()-1);
+        tbt.add(temp4);
+        BlockPos.Mutable temp5 = start.mutableCopy();
+        temp5.setX(start.getX()-1);
+        temp5.setZ(start.getZ()+1);
+        tbt.add(temp5);
+        BlockPos.Mutable temp6 = start.mutableCopy();
+        temp6.setX(start.getX()-1);
+        temp6.setZ(start.getZ()-1);
+        tbt.add(temp6);
+        BlockPos.Mutable temp7 = start.mutableCopy();
+        temp7.setZ(start.getZ()+1);
+        tbt.add(temp7);
+        BlockPos.Mutable temp8 = start.mutableCopy();
+        temp8.setZ(start.getZ()-1);
+        tbt.add(temp8);
 
     }
 }
