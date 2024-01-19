@@ -20,12 +20,13 @@ public class MetalDetectorItem extends Item {
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
         if(!context.getWorld().isClient()){
-            BlockPos posClicked = context.getBlockPos();
+            BlockPos posClicked;
             PlayerEntity player = context.getPlayer();
             boolean foundBlock = false;
 
             ArrayList<BlockPos> threeByThree = new ArrayList<>(9);
             for(int counter = 0; counter<9; ++counter){
+                posClicked = context.getBlockPos();
                 fillList(threeByThree, posClicked);
                 for(int i = -64; i<threeByThree.get(counter).getY(); ++i){
 
@@ -54,25 +55,27 @@ public class MetalDetectorItem extends Item {
         tbt.add(start);
 
         BlockPos.Mutable temp = (BlockPos.Mutable) start;// CHECK THIS LINE MAY NOT TRANSFORM CORRECTLY
+        //check setX and setZ functions may not work properly
+        temp.setX(start.getX()+1);
+        tbt.add(start);
+        temp.setZ(start.getZ()+1);
+        tbt.add(start);
+        temp.setZ(start.getZ()-2);
+        temp.setX(start.getX());
+        temp.setZ(start.getZ());
 
-        temp.setX(temp.getX()+1);
-        tbt.add(temp);
-        temp.setZ(temp.getZ()+1);
-        tbt.add(temp);
-        temp.setZ(temp.getZ()-2);
-        temp = (BlockPos.Mutable) start;
+        temp.setX(start.getX()-1);
+        tbt.add(start);
+        temp.setZ(start.getZ()+1);
+        tbt.add(start);
+        temp.setZ(start.getZ()-2);
+        temp.setX(start.getX());
+        temp.setZ(start.getZ());
 
-        temp.setX(temp.getX()-1);
-        tbt.add(temp);
-        temp.setZ(temp.getZ()+1);
-        tbt.add(temp);
-        temp.setZ(temp.getZ()-2);
-        temp = (BlockPos.Mutable) start;
-
-        temp.setZ(temp.getZ()+1);
-        tbt.add(temp);
-        temp.setZ(temp.getZ()-2);
-        temp = (BlockPos.Mutable) start;//check these too
+        temp.setZ(start.getZ()+1);
+        tbt.add(start);
+        temp.setZ(start.getZ()-2);
+        temp.setZ(start.getZ());
 
     }
 }
