@@ -15,6 +15,8 @@ public class ModItems {
     public static final Item RAW_THORIUM = registerItem("raw_thorium", new Item(new FabricItemSettings()));
     public static final Item RAW_URANIUM = registerItem("raw_uranium", new Item(new FabricItemSettings()));
 
+
+
     public static final Item METAL_DETECTOR = registerItem("metal_detector", new MetalDetectorItem(new FabricItemSettings()));
 
     private static Item registerItem(String name, Item item){

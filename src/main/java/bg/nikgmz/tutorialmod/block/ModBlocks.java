@@ -1,10 +1,12 @@
 package bg.nikgmz.tutorialmod.block;
 
 import bg.nikgmz.tutorialmod.TutorialMod;
+import bg.nikgmz.tutorialmod.block.custom.EnrichmentStation;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.FurnaceBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -29,6 +31,8 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.STONE).strength(2f)));
     public static final Block DEEPSLATE_THORIUM_ORE = registerBlock("deepslate_thorium_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE).strength(4f)));
+    public static final Block ENRICHMENT_STATION = registerBlock("enrichment_station",
+            new EnrichmentStation(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).strength(4f)));
 
 
     private static Block registerBlock(String name, Block block){

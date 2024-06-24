@@ -27,6 +27,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.URANIUM_BLOCK);
                         entries.add(ModBlocks.RAW_URANIUM_BLOCK);
 
+                        entries.add(ModBlocks.ENRICHMENT_STATION);
+
                         entries.add(ModBlocks.URANIUM_ORE);
                         entries.add(ModBlocks.DEEPSLATE_URANIUM_ORE);
                         entries.add(ModBlocks.THORIUM_ORE);

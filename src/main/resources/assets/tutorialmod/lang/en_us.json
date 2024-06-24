@@ -15,5 +15,9 @@
   "block.tutorialmod.thorium_ore": "Thorium Ore",
   "block.tutorialmod.deepslate_thorium_ore": "Deepslate Thorium Ore",
 
+
+
+  "block.tutorialmod.enrichment_station": "Enrichment Station",
+
   "itemgroup.mod": "Tutorial Mod"
 }
